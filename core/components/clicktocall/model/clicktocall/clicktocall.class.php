@@ -46,10 +46,10 @@
         public function clickToCallShow($tpl){
             $mobileDetect = $this->modx->getOption('clicktocall_mobiledetect');
             if($mobileDetect){
-                $this->modx->regClientScript("/assets/components/clicktocall/js/plugins/mobile-detect.min.js");
+                $this->modx->regClientScript($this->config['jsUrl']."plugins/mobile-detect.min.js");
             }
-            $this->modx->regClientScript("/assets/components/clicktocall/js/clicktocall.js");
-            $this->modx->regClientCSS("/assets/components/clicktocall/css/clicktocall.css");
+            $this->modx->regClientScript($this->config['jsUrl']."clicktocall.js");
+            $this->modx->regClientCSS($this->config['cssUrl']."clicktocall.css");
             return $this->modx->getChunk($tpl);
         }
     }

@@ -3,7 +3,7 @@
 #ClickToCall .click-to-call-phone {-moz-border-radius:50% !important;-webkit-border-radius:50% !important;border-radius:50% !important;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;background-color:rgba(26,255,179, .5);
     width:70px;height:70px;-webkit-animation: uptocallmini 1.5s 0s ease-out infinite;-moz-animation: uptocallmini 1.5s 0s ease-out infinite;animation: uptocallmini 1.5s 0s ease-out infinite;}
 
-#ClickToCall .click-to-call-phone:before {content: "";position: absolute;width: 100%;height: 100%;top:0;left:0;background-image:url("/assets/components/clicktocall/images/mobile.png");background-repeat:no-repeat;background-position:center center;
+#ClickToCall .click-to-call-phone:before {content: "";position: absolute;width: 100%;height: 100%;top:0;left:0;background-image:url("../images/mobile.png");background-repeat:no-repeat;background-position:center center;
     -webkit-animation: uptocallphone 1.5s linear infinite;-moz-animation: uptocallphone 1.5s linear infinite;animation: uptocallphone 1.5s linear infinite;}
 
 @-webkit-keyframes uptocallphone {
