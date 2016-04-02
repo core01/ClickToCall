@@ -5,7 +5,7 @@ define('PKG_NAME', 'ClickToCall');
 define('PKG_NAME_LOWER', strtolower(PKG_NAME));
 
 define('PKG_VERSION', '0.1.0');
-define('PKG_RELEASE', 'beta');
+	define('PKG_RELEASE', 'rc1');
 define('PKG_AUTO_INSTALL', true);
 define('PKG_NAMESPACE_PATH', '{core_path}components/' . PKG_NAME_LOWER . '/');
 
@@ -34,7 +34,7 @@ define('MODX_ASSETS_URL', MODX_BASE_URL . 'assets/');
 /* define build options */
 define('BUILD_MENU_UPDATE', true);
 define('BUILD_ACTION_UPDATE', false);
-define('BUILD_SETTING_UPDATE', true);
+	define('BUILD_SETTING_UPDATE', false);
 define('BUILD_CHUNK_UPDATE', false);
 
 define('BUILD_SNIPPET_UPDATE', true);

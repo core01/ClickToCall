@@ -3,10 +3,10 @@
     /**
      * Get a list of Items
      */
-    class BusinessHoursGetListProcessor extends modObjectGetListProcessor
+    class ClickToCallHoursGetListProcessor extends modObjectGetListProcessor
     {
-        public $objectType = 'BusinessHours';
-        public $classKey = 'BusinessHours';
+        public $objectType = 'ClickToCallHours';
+        public $classKey = 'ClickToCallHours';
         public $defaultSortField = 'id';
         public $defaultSortDirection = 'ASC';
         //public $permission = 'list';
@@ -107,4 +107,4 @@
 
     }
 
-    return 'BusinessHoursGetListProcessor';
+    return 'ClickToCallHoursGetListProcessor';

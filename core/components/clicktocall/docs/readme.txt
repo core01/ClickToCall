@@ -1,10 +1,13 @@
 --------------------
 ClickToCall
 --------------------
-Author: John Doe <john@doe.com>
+Author: Roman Sadoyan
+Email: rs@rosa.pro
+Twitter: https://twitter.com/absoluteaffect
+GitHub: https://github.com/core01/
 --------------------
 
-A basic Extra for MODx Revolution.
+ClickToCall widget for mobile devices.
 
 Feel free to suggest ideas/improvements/bugs on GitHub:
-http://github.com/username/ClickToCall/issues
+https://github.com/core01/ClickToCall/issues

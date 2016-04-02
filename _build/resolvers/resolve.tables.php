@@ -85,13 +85,13 @@
                     'Sunday'
                 );
                 foreach ($days as $day) {
-                    if (!$row = $modx->getObject('BusinessHours', array('weekday' => $day))) {
-                        $row = $modx->newObject('BusinessHours',
+                    if (!$row = $modx->getObject('ClickToCallHours', array('weekday' => $day))) {
+                        $row = $modx->newObject('ClickToCallHours',
                             array(
                                 'weekday'    => $day,
                                 'start_time' => '9:00',
                                 'end_time'   => '18:00',
-                                'work' => 1,
+                                'work'       => 0,
                             ));
                         $row->save();
                     }

@@ -3,11 +3,6 @@
     $settings = array();
 
     $tmp = array(
-        'force'        => array(
-            'xtype' => 'combo-boolean',
-            'value' => false,
-            'area'  => 'clicktocall_main',
-        ),
         'mobiledetect' => array(
             'xtype' => 'combo-boolean',
             'value' => true,
@@ -18,7 +13,6 @@
             'value' => '',
             'area'  => 'clicktocall_main',
         )
-
     );
 
     foreach ($tmp as $k => $v) {

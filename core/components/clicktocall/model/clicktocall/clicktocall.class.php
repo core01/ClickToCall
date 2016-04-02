@@ -43,13 +43,17 @@
             $this->modx->lexicon->load('clicktocall:default');
         }
 
-        public function clickToCallShow($tpl){
+        public function clickToCallShow($tpl, $phone, $elementId)
+        {
             $mobileDetect = $this->modx->getOption('clicktocall_mobiledetect');
-            if($mobileDetect){
-                $this->modx->regClientScript($this->config['jsUrl']."plugins/mobile-detect.min.js");
+            if ($mobileDetect) {
+                $this->modx->regClientScript($this->config['jsUrl'] . "plugins/mobile-detect.min.js");
             }
-            $this->modx->regClientScript($this->config['jsUrl']."clicktocall.js");
-            $this->modx->regClientCSS($this->config['cssUrl']."clicktocall.css");
-            return $this->modx->getChunk($tpl);
+            $this->modx->regClientScript($this->config['jsUrl'] . "clicktocall.js");
+            $this->modx->regClientCSS($this->config['cssUrl'] . "clicktocall.css");
+            return $this->modx->parseChunk($tpl, array(
+                'phone'     => $phone,
+                'elementId' => $elementId,
+            ));
         }
     }
