@@ -3,7 +3,7 @@
 $menus = array();
 
 $tmp = array(
-	'clicktocall' => array(
+	'ClickToCall' => array(
 		'description' => 'clicktocall_menu_desc',
 		'action' => array(
 			'controller' => 'index',

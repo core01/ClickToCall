@@ -8,7 +8,7 @@
             'value' => true,
             'area'  => 'clicktocall_main',
         ),
-        'phone' => array(
+        'phone'        => array(
             'xtype' => 'textfield',
             'value' => '',
             'area'  => 'clicktocall_main',
