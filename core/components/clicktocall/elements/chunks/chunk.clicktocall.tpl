@@ -1,3 +1,3 @@
-<a href="tel:[[+phone]]" id="[[+elementId]]">
+<a href="tel:[[+phone]]" id="ClickToCall">
     <div class="click-to-call-phone"></div>
 </a>

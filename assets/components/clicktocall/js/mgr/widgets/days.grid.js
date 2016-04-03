@@ -37,54 +37,6 @@ ClickToCall.grid.Days = function (config) {
 Ext.extend(ClickToCall.grid.Days, MODx.grid.Grid, {
     windows: {},
 
-    getMenu: function (grid, rowIndex) {
-        var ids = this._getSelectedIds();
-
-        var row = grid.getStore().getAt(rowIndex);
-        var menu = ClickToCall.utils.getMenu(row.data['actions'], this, ids);
-
-        this.addContextMenuDay(menu);
-    },
-
-    updateDay: function (btn, e, row) {
-        if (typeof(row) != 'undefined') {
-            this.menu.record = row.data;
-        }
-        else if (!this.menu.record) {
-            return false;
-        }
-        var id = this.menu.record.id;
-
-        MODx.Ajax.request({
-            url: this.config.url,
-            params: {
-                action: 'mgr/day/get',
-                id: id
-            },
-            listeners: {
-                success: {
-                    fn: function (r) {
-                        var w = MODx.load({
-                            xtype: 'clicktocall-day-window-update',
-                            id: Ext.id(),
-                            record: r,
-                            listeners: {
-                                success: {
-                                    fn: function () {
-                                        this.refresh();
-                                    }, scope: this
-                                }
-                            }
-                        });
-                        w.reset();
-                        w.setValues(r.object);
-                        w.show(e.target);
-                    }, scope: this
-                }
-            }
-        });
-    },
-
     getFields: function (config) {
         return ['id', 'weekday', 'start_time', 'end_time', 'work'];
     },

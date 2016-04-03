@@ -101,7 +101,7 @@
                 break;
 
             case xPDOTransport::ACTION_UNINSTALL:
-                $modelPath = $modx->getOption('clicktocall_core_path', null,
+                /*$modelPath = $modx->getOption('clicktocall_core_path', null,
                         $modx->getOption('core_path') . 'components/clicktocall/') . 'model/';
                 $modx->addPackage('clicktocall', $modelPath);
 
@@ -121,7 +121,7 @@
                 }
                 foreach ($objects as $tmp) {
                     $manager->removeObjectContainer($tmp);
-                }
+                }*/
 
                 break;
         }

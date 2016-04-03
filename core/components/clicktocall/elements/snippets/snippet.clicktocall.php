@@ -8,17 +8,17 @@
     }
 
     $force = $modx->getOption('force', $scriptProperties, 0);
-    $elementId = $modx->getOption('elementId', $scriptProperties, 'ClickToCall');
     $tpl = $modx->getOption('tpl', $scriptProperties, 'ClickToCall.tpl');
     $defaultPhone = $modx->getOption('clicktocall_phone');
     $phone = $modx->getOption('phone', $scriptProperties, $defaultPhone);
-
+    $useCustomCss = $modx->getOption('useCustomCss', $scriptProperties, 0);
+    $useCustomJs = $modx->getOption('useCustomJs', $scriptProperties, 0);
     if (!$timezone = $modx->getOption('date_timezone')) {
         date_default_timezone_set('Europe/Moscow');
     }
     $today = date("l");
     if ($force != 0) {
-        return $ClickToCall->clickToCallShow($tpl, $phone, $elementId);
+        return $ClickToCall->clickToCallShow($tpl, $phone, $useCustomCss, $useCustomJs);
     }
     if ($dbDay = $modx->getObject('ClickToCallHours', array('weekday' => $today, 'work' => 1))) {
         if (!$startTime = $dbDay->get('start_time')) {
@@ -31,7 +31,7 @@
         $endTime = strtotime($endTime);
         $time = time();
         if ($time >= $startTime and $time <= $endTime) {
-            return $ClickToCall->clickToCallShow($tpl, $phone, $elementId);
+            return $ClickToCall->clickToCallShow($tpl, $phone, $useCustomCss, $useCustomJs);
         }
     }
 

@@ -3,17 +3,25 @@
     $properties = array();
 
     $tmp = array(
-        'force'     => array(
+        'force'        => array(
             'type'  => 'combo-boolean',
             'value' => false,
         ),
-        'tpl'       => array(
+        'tpl'          => array(
             'type'  => 'textfield',
             'value' => 'ClickToCall.tpl',
         ),
-        'elementId' => array(
+        'phone'        => array(
             'type'  => 'textfield',
-            'value' => 'ClickToCall',
+            'value' => '',
+        ),
+        'useCustomCss' => array(
+            'type'  => 'combo-boolean',
+            'value' => false,
+        ),
+        'useCustomJs'  => array(
+            'type'  => 'combo-boolean',
+            'value' => false,
         )
     );
 
