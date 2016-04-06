@@ -2,9 +2,10 @@
     display: none;
     position: fixed;
     bottom: 60px;
-    right: 40%;
+    right: 50%;
     cursor: pointer;
     z-index: 999;
+    margin-right: -35px;
 }
 
 #ClickToCall .click-to-call-phone {

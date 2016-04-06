@@ -1,5 +1,9 @@
 Changelog for ClickToCall.
 
+0.1.0-rc2
+==============
+- Fixed: Button central alignment
+
 0.1.0-rc1
 ==============
 - Initial release
