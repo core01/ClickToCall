@@ -2,7 +2,7 @@
 ClickToCall
 --------------------
 Author: Roman Sadoyan
-Email: rs@rosa.pro
+Email: ra@sadoyan.ru
 Twitter: https://twitter.com/absoluteaffect
 GitHub: https://github.com/core01/
 --------------------
