@@ -1,5 +1,9 @@
 Changelog for ClickToCall.
 
+0.1.0 pl
+==============
+Removing jQuery as a hard dependency
+
 0.1.0-rc2
 ==============
 - Fixed: Button central alignment
