@@ -1,49 +1,47 @@
 ## ClickToCall
 
-Виджет звонка для мобильных устройств.
+The call widget for mobile devices.
 
-## Особенности
-* Выводит виджет только для пользоваталей мобильных устройств (используется mobile-detect.js).
-* Гибкая настройка времени отображения виджета по каждому дню.
-* Можно выключить используемую библиотеку mobile-detect.js в настройках, если Вы уже её используете на сайте.
-* Имеется возможность использовать собственные JS/CSS файлы.
+[Описание на русском тут](https://github.com/core01/ClickToCall/blob/master/README.RU.md)
 
-## Параметры сниппета ClickToCall
-| Имя              | По умолчанию                                      | Описание                                                                  |
+## Features
+* Widget show only for mobile device users (use mobile-detect.js to detect mobile).
+* Flexible configuration of the widget display time for each day.
+* You may to turn off using mobile-detect library in system settings.
+* You can use your own JS/CSS files.
+## Component settings
+[![](https://file.modx.pro/files/2/9/b/29b961716d1558107c1685bbff6feedf.png)](https://file.modx.pro/files/2/9/b/29b961716d1558107c1685bbff6feedf.png)
+## ClickToCall snippet parameter
+| Name              | Default                                   | Description                                                                 |
 | --------------------- | ------------------------------------------------- | ------------------------------------------------------------------------- |
-| **&force**         | 0     | Принудительный вызов виджета   |
-| **&phone** | | Телефон для виджета, если параметр не указан, то берется значение из системных настроек|
-| **&tpl**     | ClickToCall.tpl   | Чанк с виджетом     |  
-| **&useCustomCss** | 0 | Полностью отключает подключение CSS компонентом, необходимо для использования своих собственных стилей  |
-| **&useCustomJs**| 0 | То же самое что и *&useCustomCss*, отключает подключение JS скрипта компонентом, необходимо для использования своих собственных скриптов |
+| **&force**         | 0     | Forced widget call   |
+| **&phone** | | Phone number for widget, if not specified system setting *clicktocall_phone* will be used|
+| **&tpl**     | ClickToCall.tpl   | Widget's chunk |  
+| **&useCustomCss** | 0 | Turn off default CSS.  |
+| **&useCustomJs**| 0 | Turn off default JS. |
 
-### Системные настройки:
-| Имя                     | По умолчанию                        | Описание                                                                         |
+Note: If you turn off default CSS and JS you need manually write your own JS and CSS for widget 
+### System settings:
+| Name                     | Default                      | Description                                                                         |
 | ---------------------------- | ----------------------------------- | -------------------------------------------------------------------------------- |
-| **clicktocall_mobiledetect**    | Да                                | Включить использование библиотеки mobile-detect.js. Если Вы уже используете mobile-detect на своём сайте, отключите данную опцию. |
-| **clicktocall_phone**    |                                 | Телефон для виджета по умолчанию |
+| **clicktocall_mobiledetect**    | Yes                                | Use mobile-detect.js?. If you are already use mobile-detect.js on your site, turn it off. |
+| **clicktocall_phone**    |                                 | Default phone for widget |
 
-Сниппет должен вызываться не кэшируемым!
+NOTE: Snippet must be called non-cached!
 
-### Примеры использования:
+### Examples:
 
-Для принудительного вызова сниппета используется параметр *&force*
+For forced widget's call use *&force* parameter:
+
 ```
 [[!ClickToCall? &force=`1`]]
 ```
-В таком случае виджет будет отображаться всегда, игнорируя временные рамки.
+In this case snippet will ignore time frames.
 
-Если Вам необходимо на разных страницах указывать разный телефон, используйте следующий вызов:
+If you want to show different phones one your pages you can use:
 ```
 [[!ClickToCall? &phone=`+79991234567`]]
 ```
 
-## Визуальное отображение виджета
+### Result
 [![](https://file.modx.pro/files/6/c/1/6c145fac108b67a90d7e604fbe076ba8.png)](https://file.modx.pro/files/6/c/1/6c145fac108b67a90d7e604fbe076ba8.png)
-
-## Copyright Information
-
-ClickToCall is distributed as GPL (as MODx Revolution is), but the copyright owner
-(Roman Sadoyan) grants all users of ClickToCall the ability to modify, distribute
-and use ClickToCall in MODx development as they see fit, as long as attribution
-is given somewhere in the distributed source of all derivative works.
